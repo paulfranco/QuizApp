@@ -1,10 +1,13 @@
 package co.paulfran.paulfranco.quizapp;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,12 +44,21 @@ public class MainActivity extends AppCompatActivity {
         String answerFive = questionFiveAnswerEditText.getText().toString().toLowerCase();
         Log.i("info", answerFive);
 
-        int results = calculateAnswers(answerOne, answerTwo, answerThree, answerFour, answerFive);
+        CheckBox trueCheckBox = (CheckBox) findViewById(R.id.trueCheckBox);
+        boolean answeredTrue = trueCheckBox.isChecked();
+
+        RadioButton yesRadioButton = (RadioButton) findViewById(R.id.yesRadioButton);
+        boolean yes = yesRadioButton.isChecked();
+
+        RadioButton noRadioButton = (RadioButton) findViewById(R.id.noRadioButton);
+        boolean no = noRadioButton.isChecked();
+
+        int results = calculateAnswers(answerOne, answerTwo, answerThree, answerFour, answerFive, answeredTrue, yes);
         displayResults(results);
 
     }
 
-    public int calculateAnswers(String answerOne, String answerTwo, String answerThree, String answerFour, String answerFive) {
+    public int calculateAnswers(String answerOne, String answerTwo, String answerThree, String answerFour, String answerFive, boolean answeredTrue, boolean yes) {
         int score = 0;
         if (answerOne.equals("blue")) {
             score = score + 1;
@@ -63,11 +75,19 @@ public class MainActivity extends AppCompatActivity {
         if (answerFive.equals("toronto")){
             score = score + 1;
         }
+        if (answeredTrue) {
+            score = score + 1;
+        }
+        if (yes) {
+            score = score + 1;
+        }
+
         Log.i("info", String.valueOf(score));
         return score;
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void displayResults(int results){
         TextView resultsTextView = (TextView) findViewById(R.id.resultsTextView);
         resultsTextView.setVisibility(View.VISIBLE);
