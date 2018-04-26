@@ -90,16 +90,11 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void displayResults(int results){
-        //TextView resultsTextView = (TextView) findViewById(R.id.resultsTextView);
-        //resultsTextView.setVisibility(View.VISIBLE);
-        //if (results < 2) {
-        //   resultsTextView.setText(" :0( You only answered " + String.valueOf(results) + " questions correctly");
-        // }
-        // if (results >= 3) {
-        //    resultsTextView.setText(" YAY!!! You answered " + String.valueOf(results) + " questions correctly");
-        // }
-
-         Toast.makeText(getApplicationContext()," YAY!!! You answered " + String.valueOf(results) + " questions correctly",Toast.LENGTH_SHORT).show();
+        if (results > 2) {
+            Toast.makeText(getApplicationContext(), " YAY!!! You answered " + String.valueOf(results) + " questions correctly", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), " :0( Sorry. You only answered " + String.valueOf(results) + " questions correctly", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
