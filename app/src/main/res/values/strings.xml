@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Quiz App</string>
+    <string name="title">Random Questions</string>
+    <string name="question_one">What color is cobalt?</string>
+    <string name="question_two">What is the lightest existing metal?</string>
+    <string name="question_three">What planet is closest to the sun?</string>
+    <string name="question_four">What year was Google launched on the web?</string>
+    <string name="question_five">What is the largest city in Canada?</string>
+    <string name="submit">Submit</string>
+    <string name="answer_hint">answer</string>
+    <string name="true_or_false">True or False</string>
+    <string name="last_question">Check if True Leave Empty if False</string>
+    <string name="results">Results</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
 </resources>

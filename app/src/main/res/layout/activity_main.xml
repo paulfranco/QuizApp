@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="#d9d9d9"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="368dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             tools:layout_editor_absoluteX="8dp"
@@ -26,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
                 android:gravity="center_horizontal"
-                android:text="Random Questions"
+                android:text="@string/title"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -44,8 +42,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aclonica"
-                    android:text="What color is cobalt?"
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/question_one"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
                 <EditText
@@ -57,10 +55,10 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="answer"
+                    android:hint="@string/answer_hint"
                     android:inputType="textPersonName"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray" />
+                    android:textColorHint="@android:color/black" />
 
             </LinearLayout>
 
@@ -77,8 +75,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aclonica"
-                    android:text="What is the lightest existing metal?"
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/question_two"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
                 <EditText
@@ -90,10 +88,10 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="answer"
+                    android:hint="@string/answer_hint"
                     android:inputType="textPersonName"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray" />
+                    android:textColorHint="@android:color/black" />
 
             </LinearLayout>
 
@@ -110,8 +108,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aclonica"
-                    android:text="What planet is closest to the sun?"
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/question_three"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
                 <EditText
@@ -123,10 +121,10 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="answer"
+                    android:hint="@string/answer_hint"
                     android:inputType="textPersonName"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray" />
+                    android:textColorHint="@android:color/black" />
 
             </LinearLayout>
 
@@ -143,8 +141,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aclonica"
-                    android:text="What year was Google launched on the web?"
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/question_four"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
                 <EditText
@@ -156,10 +154,10 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="answer"
+                    android:hint="@string/answer_hint"
                     android:inputType="textPersonName"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray" />
+                    android:textColorHint="@android:color/black" />
 
             </LinearLayout>
 
@@ -176,8 +174,8 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/aclonica"
-                    android:text="What is the largest city in Canada?"
-                    android:textColor="@android:color/holo_blue_dark"
+                    android:text="@string/question_five"
+                    android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
                 <EditText
@@ -189,11 +187,83 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="answer"
+                    android:hint="@string/answer_hint"
                     android:inputType="textPersonName"
                     android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/darker_gray" />
+                    android:textColorHint="@android:color/black" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="@string/true_or_false"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/trueCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:text="@string/last_question"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aclonica"
+                    android:paddingLeft="15dp"
+                    android:paddingStart="15dp"
+                    android:text="Does the United States have 50 States?"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/yesRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingStart="15dp"
+                        android:text="@string/yes"
+                        android:textColor="@android:color/black" />
+
+                    <RadioButton
+                        android:id="@+id/noRadioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:paddingLeft="15dp"
+                        android:text="@string/no"
+                        android:textColor="@android:color/black" />
+                </RadioGroup>
             </LinearLayout>
 
             <TextView
@@ -201,7 +271,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Results"
+                android:text="@string/results"
                 android:textColor="@android:color/holo_red_dark"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -215,9 +285,10 @@
                 android:layout_marginTop="10dp"
                 android:background="@android:color/holo_blue_dark"
                 android:onClick="submitAnswers"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:textColor="@android:color/white"
                 android:textSize="24sp" />
+
         </LinearLayout>
     </ScrollView>
 
