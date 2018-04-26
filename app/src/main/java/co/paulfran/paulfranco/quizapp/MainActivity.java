@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -89,14 +90,16 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     public void displayResults(int results){
-        TextView resultsTextView = (TextView) findViewById(R.id.resultsTextView);
-        resultsTextView.setVisibility(View.VISIBLE);
-        if (results < 2) {
-            resultsTextView.setText(" :0( You only answered " + String.valueOf(results) + " questions correctly");
-        }
-        if (results >= 3) {
-            resultsTextView.setText(" YAY!!! You answered " + String.valueOf(results) + " questions correctly");
-        }
+        //TextView resultsTextView = (TextView) findViewById(R.id.resultsTextView);
+        //resultsTextView.setVisibility(View.VISIBLE);
+        //if (results < 2) {
+        //   resultsTextView.setText(" :0( You only answered " + String.valueOf(results) + " questions correctly");
+        // }
+        // if (results >= 3) {
+        //    resultsTextView.setText(" YAY!!! You answered " + String.valueOf(results) + " questions correctly");
+        // }
+
+         Toast.makeText(getApplicationContext()," YAY!!! You answered " + String.valueOf(results) + " questions correctly",Toast.LENGTH_SHORT).show();
     }
 
 
