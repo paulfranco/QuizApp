@@ -25,23 +25,23 @@ public class MainActivity extends AppCompatActivity {
     public void submitAnswers(View view) {
 
         EditText questionOneAnswerEditText = (EditText) findViewById(R.id.questionOneAnswerEditText);
-        String answerOne = questionOneAnswerEditText.getText().toString().toLowerCase();
+        String answerOne = questionOneAnswerEditText.getText().toString();
         Log.i("info", answerOne);
 
         EditText questionTwoAnswerEditText = (EditText) findViewById(R.id.questionTwoAnswerEditText);
-        String answerTwo = questionTwoAnswerEditText.getText().toString().toLowerCase();
+        String answerTwo = questionTwoAnswerEditText.getText().toString();
         Log.i("info", answerTwo);
 
         EditText questionThreeAnswerEditText = (EditText) findViewById(R.id.questionThreeAnswerEditText);
-        String answerThree = questionThreeAnswerEditText.getText().toString().toLowerCase();
+        String answerThree = questionThreeAnswerEditText.getText().toString();
         Log.i("info", answerThree);
 
         EditText questionFourAnswerEditText = (EditText) findViewById(R.id.questionFourAnswerEditText);
-        String answerFour = questionFourAnswerEditText.getText().toString().toLowerCase();
+        String answerFour = questionFourAnswerEditText.getText().toString();
         Log.i("info", answerFour);
 
         EditText questionFiveAnswerEditText = (EditText) findViewById(R.id.questionFiveAnswerEditText);
-        String answerFive = questionFiveAnswerEditText.getText().toString().toLowerCase();
+        String answerFive = questionFiveAnswerEditText.getText().toString();
         Log.i("info", answerFive);
 
         CheckBox trueCheckBox = (CheckBox) findViewById(R.id.trueCheckBox);
@@ -60,19 +60,19 @@ public class MainActivity extends AppCompatActivity {
 
     public int calculateAnswers(String answerOne, String answerTwo, String answerThree, String answerFour, String answerFive, boolean answeredTrue, boolean yes) {
         int score = 0;
-        if (answerOne.equals("blue")) {
+        if (answerOne.equalsIgnoreCase("blue")) {
             score = score + 1;
         }
-        if (answerTwo.equals("aluminum")) {
+        if (answerTwo.equalsIgnoreCase("aluminum")) {
             score = score + 1;
         }
-        if (answerThree.equals("mercury")) {
+        if (answerThree.equalsIgnoreCase("mercury")) {
             score = score + 1;
         }
-        if (answerFour.equals("1998")) {
+        if (answerFour.equalsIgnoreCase("1998")) {
             score = score + 1;
         }
-        if (answerFive.equals("toronto")){
+        if (answerFive.equalsIgnoreCase("toronto")){
             score = score + 1;
         }
         if (answeredTrue) {
