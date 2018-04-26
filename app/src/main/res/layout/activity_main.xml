@@ -211,14 +211,37 @@
                     android:textSize="18sp" />
 
                 <CheckBox
-                    android:id="@+id/trueCheckBox"
+                    android:id="@+id/javaCheckBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:paddingStart="10dp"
-                    android:text="@string/last_question"
+                    android:text="@string/java"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/kotlinCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/kotlin"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/pythonCheckBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/python"
                     android:textColor="@android:color/black" />
 
             </LinearLayout>
@@ -235,7 +258,7 @@
                     android:fontFamily="@font/aclonica"
                     android:paddingLeft="15dp"
                     android:paddingStart="15dp"
-                    android:text="Does the United States have 50 States?"
+                    android:text="@string/does_the_united_states_have_50_states"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp" />
 
@@ -251,6 +274,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginStart="15dp"
                         android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
                         android:paddingStart="15dp"
                         android:text="@string/yes"
                         android:textColor="@android:color/black" />
@@ -261,6 +285,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
                         android:text="@string/no"
                         android:textColor="@android:color/black" />
                 </RadioGroup>

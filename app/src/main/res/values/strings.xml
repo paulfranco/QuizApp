@@ -8,9 +8,13 @@
     <string name="question_five">What is the largest city in Canada?</string>
     <string name="submit">Submit</string>
     <string name="answer_hint">answer</string>
-    <string name="true_or_false">True or False</string>
+    <string name="true_or_false">Which Languages can be used to develop android apps</string>
     <string name="last_question">Check if True Leave Empty if False</string>
     <string name="results">Results</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="does_the_united_states_have_50_states">Does the United States have 50 States?</string>
 </resources>

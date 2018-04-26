@@ -45,8 +45,14 @@ public class MainActivity extends AppCompatActivity {
         String answerFive = questionFiveAnswerEditText.getText().toString();
         Log.i("info", answerFive);
 
-        CheckBox trueCheckBox = (CheckBox) findViewById(R.id.trueCheckBox);
-        boolean answeredTrue = trueCheckBox.isChecked();
+        CheckBox javaCheckBox = (CheckBox) findViewById(R.id.javaCheckBox);
+        boolean isCheckedJavaCheckBox = javaCheckBox.isChecked();
+
+        CheckBox kotlinCheckBox = (CheckBox) findViewById(R.id.kotlinCheckBox);
+        boolean isCheckedKotlinCheckBox = kotlinCheckBox.isChecked();
+
+        CheckBox pythonCheckBox = (CheckBox) findViewById(R.id.pythonCheckBox);
+        boolean isCheckedPythonCheckBox = pythonCheckBox.isChecked();
 
         RadioButton yesRadioButton = (RadioButton) findViewById(R.id.yesRadioButton);
         boolean yes = yesRadioButton.isChecked();
@@ -54,12 +60,12 @@ public class MainActivity extends AppCompatActivity {
         RadioButton noRadioButton = (RadioButton) findViewById(R.id.noRadioButton);
         boolean no = noRadioButton.isChecked();
 
-        int results = calculateAnswers(answerOne, answerTwo, answerThree, answerFour, answerFive, answeredTrue, yes);
+        int results = calculateAnswers(answerOne, answerTwo, answerThree, answerFour, answerFive, isCheckedJavaCheckBox, isCheckedKotlinCheckBox, isCheckedPythonCheckBox, yes);
         displayResults(results);
 
     }
 
-    public int calculateAnswers(String answerOne, String answerTwo, String answerThree, String answerFour, String answerFive, boolean answeredTrue, boolean yes) {
+    public int calculateAnswers(String answerOne, String answerTwo, String answerThree, String answerFour, String answerFive, boolean isCheckedJavaCheckBox, boolean isCheckedKotlinCheckBox, boolean isCheckedPythonCheckBox, boolean yes) {
         int score = 0;
         if (answerOne.equalsIgnoreCase("blue")) {
             score = score + 1;
@@ -76,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         if (answerFive.equalsIgnoreCase("toronto")){
             score = score + 1;
         }
-        if (answeredTrue) {
+        if (isCheckedJavaCheckBox && isCheckedKotlinCheckBox && !isCheckedPythonCheckBox) {
             score = score + 1;
         }
         if (yes) {
